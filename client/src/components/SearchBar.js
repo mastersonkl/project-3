@@ -1,6 +1,5 @@
 import React from 'react';
 import {Route, BrowserRouter as Router, Link} from 'react-router-dom';
-import List from "./List";
 
 
 class SearchBar extends React.Component { // sets state value to a string
@@ -24,7 +23,7 @@ class SearchBar extends React.Component { // sets state value to a string
                 <form onSubmit={
                         this.onFormSubmit
                     }
-                    className="ui action input">
+                    className="ui fluid action input">
                     <input // props
                         type="text"
                         placeholder="Search..."
@@ -39,9 +38,6 @@ class SearchBar extends React.Component { // sets state value to a string
                         Search
                     </button>
                 </form>
-                
-                <div><List/></div>
-
             </div>
 
         );

@@ -4,6 +4,7 @@ import Popup from "reactjs-popup";
 const List = () => {
     return (
         <div>
+            <div className="ui container">
             <div className="ui big very relaxed list">
 
                 <div className="item">
@@ -53,6 +54,7 @@ const List = () => {
                         </Popup>
                 </div>
 
+            </div>
             </div>
         </div>
     )
