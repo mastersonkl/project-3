@@ -1,5 +1,8 @@
 import React from 'react';
 import SearchBar from './SearchBar';
+import './Search.css';
+import List from "./List";
+
 
 class Search extends React.Component {
 
@@ -25,10 +28,19 @@ class Search extends React.Component {
 
 render() {
     return (
+        <div>
         <div className="ui container">
+            <div className="search-bar">
             <SearchBar onSubmit={this.onSearchSubmit} />
             {/*This line will confirm how many reviews are received */}
             {/* Found: {this.state.reviews.length} reviews */}
+        </div>
+        </div>
+        <div className="ui container">
+            <div className="results">
+            <div><List/></div>
+            </div>
+        </div>
         </div>
     );
 }
