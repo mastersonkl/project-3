@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import FormEntry from "./components/FormEntry"
 import List from "./components/List";
 import './App.css';
+import Login from "./components/Login";
 
 class App extends React.Component {
  
@@ -15,6 +16,7 @@ class App extends React.Component {
                 <Search />   
                 <List/>
                 <FormEntry/>
+                <Login />
             </div>
 
             
