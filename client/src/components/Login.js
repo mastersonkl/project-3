@@ -4,11 +4,11 @@ import Axios from 'axios';
 
 function Login() {
 
-    const [usernameReg, setUsernameReg] = useState('')
-    const [passwordReg, setPasswordReg] = useState('')
+    const [usernameReg, setUsernameReg] = useState("")
+    const [passwordReg, setPasswordReg] = useState("")
 
     const register = () => {
-        Axios.post('/api/register', {
+        Axios.post('/register', {
             username: usernameReg,
             password: passwordReg,
         }).then((response) => {
