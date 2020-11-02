@@ -1,9 +1,9 @@
 import React from 'react';
 import Search from './components/Search';
 import Navbar from './components/Navbar';
-import FormEntry from "./components/FormEntry"
+import FormEntry from './components/FormEntry';
 import './App.css';
-import Login from "./components/Login";
+import Login from './components/Login'; 
 import {Route, BrowserRouter as Router} from 'react-router-dom';
 
 
@@ -21,7 +21,7 @@ class App extends React.Component {
                     <Navbar />
 
                     <Route path="/login"
-                    component={Login}/>
+                    component={Login}/> 
 
                     <Route path="/review"
                     component={FormEntry}/>
