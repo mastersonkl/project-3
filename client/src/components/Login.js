@@ -4,8 +4,16 @@ import Axios from 'axios';
 
 function Login() {
 
-    const [usernameReg, setUsernameReg] = useState("")
-    const [passwordReg, setPasswordReg] = useState("")
+    const [usernameReg, setUsernameReg] = useState("");
+    const [passwordReg, setPasswordReg] = useState("");
+
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+
+    const [loginStatus, setLoginStatus] = useState("");
+
+
+
 
     const register = () => {
         Axios.post('/register', {
@@ -16,11 +24,25 @@ function Login() {
         });
     };
 
+    const login = () => {
+        Axios.post('/login', {
+            username: username,
+            password: password,
+        }).then((response) => {
+            if (response.data.message){
+                setLoginStatus(response.data.message)
+            } else {
+                setLoginStatus(response.data[0].username)
+            }
+            
+        });
+    };
+
 
 
     return (
 
-        <div className="Login">
+        <div className="register">
             <div className="registration">
                 <h1>Registration</h1>
                 <label>Username</label>
@@ -36,13 +58,25 @@ function Login() {
                 />
                 <button onClick={register}>Register</button>
             </div>
+
+
+
+
             <div className="login">
                 <h1>Login</h1>
-                <input type="text" placeholder="Username..." />
-                <input type="password" placeholder="Password..." />
-                <button>Register</button>
+                <input type="text" placeholder="Username..."
+                    onChange={(e) => {
+                        setUsername(e.target.value);
+                    }}
+                />
+                <input type="password" placeholder="Password..."
+                    onChange={(e) => {
+                        setPassword(e.target.value);
+                    }} />
+                <button onClick={login}>Login</button>
 
             </div>
+                <h1>{loginStatus}</h1>
         </div>
 
     );
