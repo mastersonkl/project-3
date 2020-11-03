@@ -1,7 +1,7 @@
 import React from "react";
 import Search from "./components/Search";
 import Navbar from "./components/Navbar";
-import FormEntry from "./components/FormEntry";
+import Form from "./components/Form";
 import "./App.css";
 import Login from "./components/Login";
 import { Route, BrowserRouter as Router } from "react-router-dom";
@@ -15,7 +15,7 @@ class App extends React.Component {
 
           <Route path="/login" component={Login} />
 
-          <Route path="/review" component={FormEntry} />
+          <Route path="/review" component={Form} />
 
           <Route path="/search" component={Search} />
         </Router>
