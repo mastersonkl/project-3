@@ -6,11 +6,14 @@ const Navbar = () => {
   return (
     <div>
       <div className="ui menu">
-        <a className="item">
+        <div className="item">
           <Link to={"/search"}>
-            <i className="huge meh icon"></i>
-          </Link>
-        </a>
+          <img
+                    alt="logo"
+                    className="ui large image"
+                    src={require("../Images/logo.png")}
+                  />          </Link>
+        </div>
         <div className="item right">
           <div className="ui compact menu">
             <div className="ui simple dropdown item">
