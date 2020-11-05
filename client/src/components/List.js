@@ -42,7 +42,7 @@ const List = () => {
                   <img
                     alt="building"
                     className="ui large image"
-                    src={require("../Images/building.jpg")}
+                    src={require('../Images/building.jpg')}
                   />
 
                   <div className="content">

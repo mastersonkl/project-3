@@ -51,6 +51,7 @@ class Form extends React.Component {
       tellMore,
     } = this.state;
     return (
+      <div>
       <form onSubmit={this.onSubmit}>
         <input
           type="text"
@@ -84,6 +85,8 @@ class Form extends React.Component {
         />
         <button type="submit">Submit</button>
       </form>
+              <div class="ui fitted toggle checkbox"><input type="checkbox" class="" readonly="" tabindex="0"/><label>I certify that, to the best of my knowledge and belief, the statements provided here are true and correct.</label></div>
+              </div>
     );
   }
 }
