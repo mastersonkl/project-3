@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 const mysql = require("mysql");
 let connection;
-(connection = process.env.JAWSDB_URL
+connection = process.env.JAWSDB_URL
   ? mysql.createConnection(process.env.JAWSDB_URL)
   : mysql.createConnection({
       host: "localhost",
@@ -9,9 +9,9 @@ let connection;
       user: "root",
       password: "keroKero445",
       database: "landlord_db",
-    })),
-  connection.connect((a) => {
-    if (a) throw a;
-    console.log("Connection establish on port: " + connection.threadId);
-  }),
-  (module.exports = connection);
+    });
+connection.connect((a) => {
+  if (a) throw a;
+  console.log("Connection establish on port: " + connection.threadId);
+});
+module.exports = connection;
