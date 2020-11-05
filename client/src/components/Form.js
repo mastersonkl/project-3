@@ -37,7 +37,8 @@ class Form extends React.Component {
         tellMore,
       })
       .then((result) => {
-        //access the results here....
+        console.log("result of new review:\n");
+        console.log(result);
       });
   };
 

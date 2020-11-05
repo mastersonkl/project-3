@@ -23,12 +23,12 @@ class SearchBar extends React.Component {
         <form onSubmit={this.onFormSubmit} className="ui fluid action input">
           <input // props
             type="text"
-            placeholder="Search..."
+            placeholder="Landlord or address you're looking for."
             value={this.state.term}
             // calls function to update set state and rerender when a change is made in the form
             onChange={(e) => this.setState({ term: e.target.value })}
           />
-          <button class="ui button">Search</button>
+          <button className="ui button">Search</button>
         </form>
       </div>
     );
