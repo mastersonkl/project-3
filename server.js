@@ -12,30 +12,34 @@ const saltRounds = 10;
 const app = express();
 
 app.use(express.json());
-app.use(cors({
-  origin: ["http://localhost:3000"],
-  methods: ["GET", "POST"],
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: ["http://localhost:3000"],
+    methods: ["GET", "POST"],
+    credentials: true,
+  })
+);
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(session({
-  key: "userId",
-  secret: "subscribe",
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
-    expires: 60 * 60 * 24
-  },
-}))
+app.use(
+  session({
+    key: "userId",
+    secret: "subscribe",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      expires: 60 * 60 * 24,
+    },
+  })
+);
 
 const db = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "@Gail123",
-  database: "LoginSystem",
+  password: "keroKero445",
+  database: "ryldb",
 });
 
 app.post("/register", (req, res) => {
@@ -44,7 +48,7 @@ app.post("/register", (req, res) => {
 
   bcrypt.hash(password, saltRounds, (err, hash) => {
     if (err) {
-      console.log(err)
+      console.log(err);
     }
 
     db.query(
@@ -56,9 +60,8 @@ app.post("/register", (req, res) => {
         res.end();
       }
     );
-  })
+  });
 });
-
 
 app.get("/login", (req, res) => {
   if (req.session.user) {
@@ -67,7 +70,6 @@ app.get("/login", (req, res) => {
     res.send({ loggedIn: false });
   }
 });
-
 
 app.post("/login", (req, res) => {
   const username = req.body.username;
@@ -90,7 +92,7 @@ app.post("/login", (req, res) => {
           } else {
             res.send({ message: "Wrong username and password combination" });
           }
-        })
+        });
       } else {
         res.send({ message: "User does not exist" });
         res.end();
@@ -102,4 +104,3 @@ app.post("/login", (req, res) => {
 app.listen(3001, () => {
   console.log("runnning backend");
 });
-
