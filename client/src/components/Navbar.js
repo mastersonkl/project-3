@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { Route, BrowserRouter as Router, Link } from "react-router-dom";
 
 const Navbar = () => {
+
   return (
     <div>
       <div className="ui menu">
