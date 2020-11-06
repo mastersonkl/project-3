@@ -22,10 +22,13 @@ const Navbar = () => {
               <i className="dropdown icon"></i>
               <div className="menu">
                 <div className="item">
-                  <Link to={"/review"}>Write a review!</Link>
+                  <Link to={"/review"}>Rate a Landlord</Link>
                 </div>
-                <div className="item">Saved Reviews</div>
                 <div className="item">
+                <Link to={"/search"}> Find a Landlord</Link>
+                 </div>
+                <div className="item">
+                <Link to={"/login"}> Login/Log Out</Link>
                 </div>
               </div>
             </div>
