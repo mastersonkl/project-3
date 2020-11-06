@@ -1,11 +1,11 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import "./Search.css";
-import List from "./List";
+import ListItem from "./ListItem";
 import Axios from "axios";
 
 class Search extends React.Component {
-  state = { reviews: [], term: "" };
+  state = { reviews: null, term: "" };
   onSearchSubmit = (e) => {
     e.preventDefault();
     console.log("state: ", this.state);
@@ -47,12 +47,12 @@ class Search extends React.Component {
         <div className="ui container">
           <div className="results">
             <div>
-              <List
-              // usually list looks for the props before they're passed.
-              // if you uncomment this line after you've succesfully searched, it's fine.
-              // but if page loads, since there are no reviews yet (this.state.reviews is empty by default)
-              // it crashes immediately bc the props are undefined and are required in list.js
-              // reviews={this.state.reviews}
+              <ListItem
+                // usually list looks for the props before they're passed.
+                // if you uncomment this line after you've succesfully searched, it's fine.
+                // but if page loads, since there are no reviews yet (this.state.reviews is empty by default)
+                // it crashes immediately bc the props are undefined and are required in list.js
+                reviews={this.state.reviews}
               />
             </div>
           </div>
