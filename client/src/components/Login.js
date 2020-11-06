@@ -45,6 +45,7 @@ function Login() {
     return (
 
         <div className="register">
+          <div className="registration">
 
             <div class="ui middle aligned center aligned grid">
 
@@ -79,7 +80,6 @@ function Login() {
                 </div>
                 </div>
 
-                <div className="registration">
                     <div class="collumn">
                         <div class="column">
                             <form class="ui large form">
