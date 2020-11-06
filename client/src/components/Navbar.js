@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { Route, BrowserRouter as Router, Link } from "react-router-dom";
-
+import logo from "../Images/logo.png"
 const Navbar = () => {
   return (
     <div>
@@ -11,7 +11,7 @@ const Navbar = () => {
             <img
               alt="logo"
               className="ui large image"
-              src={require("../Images/logo.png")}
+              src={logo}
             />{" "}
           </Link>
         </div>
@@ -25,7 +25,8 @@ const Navbar = () => {
                   <Link to={"/review"}>Write a review!</Link>
                 </div>
                 <div className="item">Saved Reviews</div>
-                <div className="item">Logout</div>
+                <div className="item">
+                </div>
               </div>
             </div>
           </div>
