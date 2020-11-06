@@ -38,8 +38,8 @@ const db = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "L4l#6hkmnSP4wv",
-  database: "ryldb",
+  password: "@Gail123",
+  database: "LoginSystem",
 });
 
 app.post("/register", (req, res) => {
