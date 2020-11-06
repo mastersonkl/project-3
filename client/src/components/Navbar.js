@@ -3,17 +3,17 @@ import "./Navbar.css";
 import { Route, BrowserRouter as Router, Link } from "react-router-dom";
 
 const Navbar = () => {
-
   return (
     <div>
       <div className="ui menu">
         <div className="item">
           <Link to={"/search"}>
-          <img
-                    alt="logo"
-                    className="ui large image"
-                    src={require("../Images/logo.png")}
-                  />          </Link>
+            <img
+              alt="logo"
+              className="ui large image"
+              src={require("../Images/logo.png")}
+            />{" "}
+          </Link>
         </div>
         <div className="item right">
           <div className="ui compact menu">

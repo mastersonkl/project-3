@@ -18,10 +18,32 @@ function boringFunction(app, db) {
   });
 
   app.get("/search/:query", (req, res) => {
-    console.log("req:", req.params);
-    // db.query("SELECT FROM reviews ")
-    // res.send or res.json will send somehting back to the frontend
-    res.end();
+    console.log("req:", req.params.query);
+    const searchTerm = req.params.query;
+    db.query(
+      "SELECT * FROM reviews WHERE ?",
+      { name: searchTerm },
+      (err, results) => {
+        if (err) throw err;
+        console.log("res: ", results);
+        if (results[0]) {
+          res.send(results);
+        }
+        // if there are no results for name, query for address.
+        db.query(
+          "SELECT * FROM reviews WHERE ?",
+          { address: searchTerm },
+          (err, results) => {
+            if (err) throw err;
+            console.log("res: ", results);
+            if (results[0]) {
+              res.send(results);
+            }
+            // write code for if no results come back
+          }
+        );
+      }
+    );
   });
 }
 
