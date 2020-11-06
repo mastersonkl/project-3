@@ -55,7 +55,7 @@ class Form extends React.Component {
 
     return (
 
-      
+      <div className="container">
       <div className="ui middle aligned center aligned grid">
         <div className="column">
       <form className="ui large form" onSubmit={this.onSubmit}>
@@ -154,7 +154,7 @@ class Form extends React.Component {
                */}
                </div>
               </div>
-          
+              </div>
               
     );
   }
