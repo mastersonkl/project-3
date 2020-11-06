@@ -1,8 +1,8 @@
 import React from "react";
 import Popup from "reactjs-popup";
-import './List'
+import "./List";
 
-const List = () => {
+const List = (props) => {
   return (
     <div>
       <div className="ui container">
@@ -14,7 +14,8 @@ const List = () => {
             />
             <div className="content">
               <p className="header">
-                Landlord Name
+                {/* see corresponding note in search.js @line 51 */}
+                {/* {props.reviews[0].name} */}
                 <i className="star icon"></i>
                 <i className="star icon"></i>
                 <i className="star icon"></i>
@@ -43,7 +44,7 @@ const List = () => {
                   <img
                     alt="building"
                     className="ui large image"
-                    src={require('../Images/building.jpg')}
+                    src={require("../Images/building.jpg")}
                   />
 
                   <div className="content">
