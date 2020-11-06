@@ -38,7 +38,7 @@ const db = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "keroKero445",
+  password: "L4l#6hkmnSP4wv",
   database: "ryldb",
 });
 

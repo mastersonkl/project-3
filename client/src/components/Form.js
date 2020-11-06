@@ -85,7 +85,8 @@ class Form extends React.Component {
         />
         <button type="submit">Submit</button>
       </form>
-              <div class="ui fitted toggle checkbox"><input type="checkbox" class="" readonly="" tabindex="0"/><label>I certify that, to the best of my knowledge and belief, the statements provided here are true and correct.</label></div>
+      <div>I certify that, to the best of my knowledge and belief, the statements provided here are true and correct.</div>
+              <div class="ui fitted toggle checkbox"><input type="checkbox" class="" readonly="" tabindex="0"/><label></label></div>
               </div>
     );
   }
