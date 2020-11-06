@@ -38,6 +38,8 @@ function boringFunction(app, db) {
             console.log("res: ", results);
             if (results[0]) {
               res.send(results);
+            } else {
+              res.send([]);
             }
             // write code for if no results come back
           }
