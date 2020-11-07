@@ -4,13 +4,13 @@ import { Route, BrowserRouter as Router, Link } from "react-router-dom";
 import logo from "../Images/logo.png"
 const Navbar = () => {
   return (
-    <div>
+    <div className ="navbar1">
       <div className="ui menu">
         <div className="item">
           <Link to={"/home"}>
             <img
               alt="logo"
-              className="ui small image"
+              className="ui tiny image"
               src={logo}
             />{" "}
           </Link>
