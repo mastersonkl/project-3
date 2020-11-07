@@ -71,7 +71,7 @@ function Login() {
                                         onChange={(e) => {setPassword(e.target.value);}} 
                                         placeholder="Password"></input>
                                     </div>
-                                    <div class="ui fluid large teal submit button" onClick={login}>Login</div>
+                                    <div class="ui fluid large yellow submit button" onClick={login}>Login</div>
                                 </div>
                             </div>
                         </form>
@@ -100,7 +100,7 @@ function Login() {
                                                 onChange={ (e) => {setPasswordReg(e.target.value);} }
                                                 placeholder="Password"></input>
                                     </div>
-                                    <div class="ui fluid large teal submit button" onClick={register}>Register</div>
+                                    <div class="ui fluid large yellow submit button" onClick={register}>Register</div>
                                 </div>
                             </div>
                         </form>
