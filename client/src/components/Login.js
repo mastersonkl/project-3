@@ -45,15 +45,17 @@ function Login() {
     return (
 
         <div className="register">
+
           <div className="registration">
 
             <div class="ui middle aligned center aligned grid">
-
+          
               <div className="login">
                 <div class="collumn">
                     <div class="column">
                         <form class="ui large form">
                             <div class="ui stacked segment">
+                            <h1 className="ui header"><div className="content">Existing User<div className="sub header">If you have an account Login</div></div></h1>
                                 <div class="field">
                                     <div class="ui left icon input">
                                         <i class="user icon"></i>
@@ -84,6 +86,7 @@ function Login() {
                         <div class="column">
                             <form class="ui large form">
                                 <div class="ui stacked segment">
+                                <h1 className="ui header"><div className="content">New User<div className="sub header">Register for an account then Login</div></div></h1>
                                     <div class="field">
                                         <div class="ui left icon input">
                                             <i class="user icon"></i>
