@@ -7,10 +7,10 @@ const Navbar = () => {
     <div>
       <div className="ui menu">
         <div className="item">
-          <Link to={"/search"}>
+          <Link to={"/home"}>
             <img
               alt="logo"
-              className="ui large image"
+              className="ui small image"
               src={logo}
             />{" "}
           </Link>
