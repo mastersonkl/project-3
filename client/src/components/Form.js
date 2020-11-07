@@ -87,20 +87,6 @@ class Form extends React.Component {
         </div>
         </div>
 
-
-      {/* <div className="field">
-      <div className="ui left icon input">
-        <i className="lock icon"></i>
-        <input
-          type="text"
-          name="rentAgain"
-          value={rentAgain}
-          onChange={this.onChange}
-          Placeholder="Would you rent again?"
-        />
-        </div>
-        </div> */}
-
       <div className="field">
       <div className="ui left icon input">
         <i className="edit icon"></i>
@@ -144,6 +130,7 @@ class Form extends React.Component {
 {/* NEW STAR RATING FORM FIELD */}
       <div className="field">
         <StarRating />
+        {StarRating.state}
         </div>
 
         <button type="submit" className="ui fluid large teal submit button">Submit</button>
