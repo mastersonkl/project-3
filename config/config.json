@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "@Gail123",
-    "database": "LoginSystem",
+    "password": "L4l#6hkmnSP4wv",
+    "database": "ryldb",
     "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql"
