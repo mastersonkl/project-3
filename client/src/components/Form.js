@@ -133,7 +133,9 @@ class Form extends React.Component {
         {StarRating.state}
         </div>
 
-        <button type="submit" className="ui fluid large yellow submit button">Submit</button>
+
+        <button type="submit" className="formbutton ui fluid large yellow submit button">Submit</button>
+
         </div>
       </form>
       {/* <div>I certify that, to the best of my knowledge and belief, the statements provided here are true and correct.</div>
