@@ -1,11 +1,11 @@
 function boringFunction(app, db) {
   app.post("/newreview", (req, res) => {
     // posting new review
-    const { landlordName, address, rateStars, rentAgain, tellMore } = req.body;
+    const { landlordName, address, rateStars, website, tellMore } = req.body;
 
     db.query(
-      "INSERT INTO reviews (`name`, address, rating, rentAgain, review) VALUES (?,?,?,?,?)",
-      [landlordName, address, rateStars, rentAgain, tellMore],
+      "INSERT INTO reviews (`name`, address, rating, website, review) VALUES (?,?,?,?,?)",
+      [landlordName, address, rateStars, website, tellMore],
       (err, result) => {
         if (err) {
           console.log("failed", err);
@@ -28,6 +28,7 @@ function boringFunction(app, db) {
         console.log("res: ", results);
         if (results[0]) {
           res.send(results);
+          return
         }
         // if there are no results for name, query for address.
         db.query(
@@ -38,8 +39,10 @@ function boringFunction(app, db) {
             console.log("res: ", results);
             if (results[0]) {
               res.send(results);
+              return
             } else {
               res.send([]);
+              return
             }
             // write code for if no results come back
           }
