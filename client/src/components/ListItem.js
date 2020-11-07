@@ -8,18 +8,21 @@ const ListItem = (props) => {
 
   const renderListItem = (reviewPacket) => {
     return (
+      <div className="container">
+
+        <div className="column">
       <div key={reviewPacket.id} className="item">
         <div className="content">
-          <span className="name">{reviewPacket.name}</span>
+          <h1 className="name">{reviewPacket.name}</h1>
           <div></div>
-          <i className="map marker icon"></i>
-          <a className="address">{reviewPacket.address}</a>
+          <h3 className="address"><i className="yellow map marker icon"></i>{reviewPacket.address}</h3>
         </div>
-        <a className="website">{reviewPacket.website}</a>
-
+        
+        <h3 className="website"><i className="grey linkify icon"></i>{reviewPacket.website}</h3>
+<div>
         <Popup
           trigger={
-            <button className="ui right labeled icon button">
+            <button className="ui right labeled icon button popout">
               <i className="right arrow icon"></i>Read
             </button>
           }
@@ -40,7 +43,10 @@ const ListItem = (props) => {
             </div>
           </div>
         </Popup>
+        </div>
+        <div class="ui divider"></div>
       </div>
+      </div></div>
     );
   };
 

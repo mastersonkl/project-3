@@ -4,11 +4,9 @@ import { useHistory } from "react-router-dom";
 
 
 function Home() {
-
     let history = useHistory()
-
     return (
-        <div>
+
 
 
             <div class="ui middle aligned centered column grid">
@@ -25,9 +23,9 @@ function Home() {
             </div>
 
 
-        </div>
 
+            </div>
+        </div>
     )
 }
-
 export default Home;
