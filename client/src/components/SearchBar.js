@@ -12,7 +12,7 @@ function SearchBar(props) {
           value={props.term}
           onChange={props.onChange}
         />
-        <button className="ui button">Search</button>
+        <button className="ui yellow button">Search</button>
       </form>
     </div>
   );
