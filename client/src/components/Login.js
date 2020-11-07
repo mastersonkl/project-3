@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Axios from "axios";
+import "./Login.css";
 
 function Login() {
     const [usernameReg, setUsernameReg] = useState("");
@@ -51,6 +52,7 @@ function Login() {
             <div class="ui middle aligned center aligned grid">
           
               <div className="login">
+
                 <div class="collumn">
                     <div class="column">
                         <form class="ui large form">
@@ -59,13 +61,14 @@ function Login() {
                                 <div class="field">
                                     <div class="ui left icon input">
                                         <i class="user icon"></i>
+
                                         <input 
                                         type="text" 
                                         onChange={(e) => {setUsername(e.target.value);}} 
                                         placeholder="Username"></input>
                                     </div>
                                 </div>
-                                <div class="field">
+                                <div className="field">
                                     <div class="ui left icon input">
                                         <i class="lock icon"></i>
                                         <input 
@@ -73,7 +76,9 @@ function Login() {
                                         onChange={(e) => {setPassword(e.target.value);}} 
                                         placeholder="Password"></input>
                                     </div>
-                                    <div class="ui fluid large yellow submit button" onClick={login}>Login</div>
+
+                                    <div className="ui fluid large yellow submit button" onClick={login}>Login</div>
+
                                 </div>
                             </div>
                         </form>
@@ -82,22 +87,22 @@ function Login() {
                 </div>
                 </div>
 
-                    <div class="collumn">
-                        <div class="column">
-                            <form class="ui large form">
-                                <div class="ui stacked segment">
+                    <div className="collumn">
+                        <div className="column">
+                            <form className="ui large form">
+                                <div className="ui stacked segment">
                                 <h1 className="ui header"><div className="content">New User<div className="sub header">Register for an account then Login</div></div></h1>
-                                    <div class="field">
-                                        <div class="ui left icon input">
-                                            <i class="user icon"></i>
+                                    <div className="field">
+                                        <div className="ui left icon input">
+                                            <i className="user icon"></i>
                                             <input type="text" 
                                             onChange={ (e) => {setUsernameReg(e.target.value);} } 
                                             placeholder="Username"></input>
                                         </div>
                                     </div>
-                                    <div class="field">
-                                        <div class="ui left icon input">
-                                            <i class="lock icon"></i>
+                                    <div className="field">
+                                        <div className="ui left icon input">
+                                            <i className="lock icon"></i>
                                             <input 
                                                 type="text"
                                                 onChange={ (e) => {setPasswordReg(e.target.value);} }
