@@ -9,8 +9,7 @@ function Home() {
     return (
 <div>
        
-             
-
+            
              <div class="ui centered column grid">
             <h1 className="ui center header"><div className="content">WELCOME TO RATE YOUR LANDLORD<div className="sub header">Choose what to do first!</div></div></h1>
             </div>
@@ -18,8 +17,8 @@ function Home() {
 
 
             <div class="ui centered column grid">
-            <button floated='right' className="ui massive yellow submit button"><i className="comment outline icon"></i> Rate a Landlord </button>
-            <button floated='left' className="ui massive yellow submit button"><i className="building outline icon"></i>  Find a Landlord </button>
+            <button onClick ={() => history.push("/review")} floated='right' className="ui massive yellow submit button"><i className="comment outline icon"></i> Rate a Landlord </button>
+            <button onClick ={() => history.push("/search")} floated='left' className="ui massive yellow submit button"><i className="building outline icon"></i>  Find a Landlord </button>
             </div>
            
 
