@@ -103,6 +103,6 @@ app.post("/login", (req, res) => {
 
 require("./routes/api")(app, db);
 
-app.listen(3001, () => {
+app.listen(process.env.PORT || 3001, () => {
   console.log("runnning backend");
 });
